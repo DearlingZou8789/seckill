@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import java.util.Date;
 import java.util.List;
 
@@ -73,7 +74,7 @@ public class SeckillController
             result=new SeckillResult<Exposer>(false,e.getMessage());
         }
 
-        return result;
+                return result;
     }
 
     @RequestMapping(value = "/{seckillId}/{md5}/execution",
