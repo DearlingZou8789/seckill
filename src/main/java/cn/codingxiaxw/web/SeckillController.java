@@ -81,6 +81,7 @@ public class SeckillController
             method = RequestMethod.POST,
             produces = {"application/json;charset=UTF-8"})
     @ResponseBody
+    //  CookieValue是程序从浏览器中获取的Cookie值，只要设置了就可以获取
     public SeckillResult<SeckillExecution> execute(@PathVariable("seckillId") Long seckillId,
                                                    @PathVariable("md5") String md5,
                                                    @CookieValue(value = "userPhone",required = false) Long userPhone)
